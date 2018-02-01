@@ -10,7 +10,7 @@
 
 ````
 import React from 'react';
-import UnderConstruction from 'react-under-construction';
+import App from 'openvidu-insecure-react-library';
 import 'openvidu-insecure-react-library/build/css/index.css';
 
 const App2 = () => (
