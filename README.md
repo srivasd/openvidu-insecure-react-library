@@ -30,10 +30,6 @@ Install dependencies
 
 `npm install` or `yarn install`
 
-Install Openvidu-browser dependency too
-
-`npm i openvidu-browser` or `yarn i openvidu-browser`
-
 Start development server
 
 `npm start` or `yarn start`
