@@ -1,4 +1,4 @@
-# React NPM library starter kit
+# Openvidu insecure React library 
 
 [![Build Status](https://travis-ci.org/DimitriMikadze/create-react-library.svg?branch=master)](https://travis-ci.org/DimitriMikadze/create-react-library)
 [![Dependencies](https://img.shields.io/david/DimitriMikadze/create-react-library.svg)]()
@@ -23,12 +23,16 @@ Moved all dependencies to dev dependencies because we don't need extra dependenc
 Clone repo
 
 ````
-git clone https://github.com/DimitriMikadze/create-react-library.git
+git clone https://github.com/srivasd/openvidu-insecure-react-library.git
 ````
 
 Install dependencies
 
 `npm install` or `yarn install`
+
+Install Openvidu-browser dependency too
+
+`npm i openvidu-browser` or `yarn i openvidu-browser`
 
 Start development server
 
@@ -58,7 +62,3 @@ Produces production version of library under the `build` folder.
 ## Publish library
 
 `npm publish`
-
-## Example library built with this starter kit
-
-https://github.com/DimitriMikadze/react-under-construction
