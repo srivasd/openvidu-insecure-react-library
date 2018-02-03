@@ -1,4 +1,4 @@
 import './index.css';
-import App from './components/App';
+import OpenviduReact from './components/OpenviduReact';
 
-export default App;
+export default OpenviduReact;

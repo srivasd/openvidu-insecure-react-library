@@ -10,12 +10,12 @@
 
 ````
 import React from 'react';
-import App from 'openvidu-insecure-react-library';
+import OpenviduReact from 'openvidu-insecure-react-library';
 import 'openvidu-insecure-react-library/build/css/index.css';
 
-const App2 = () => (
-  <App/>
+const App = () => (
+  <OpenviduReact/>
 );
 
-export default App2;
+export default App;
 ````

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
+import './OpenviduReact.css';
 import { OpenVidu } from 'openvidu-browser';
 import StreamComponent from './StreamComponent.js';
 
-class App extends Component {
+class OpenviduReact extends Component {
   
   constructor(props){
     super(props);
@@ -203,4 +203,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default OpenviduReact;
