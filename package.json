@@ -1,6 +1,6 @@
 {
-  "name": "openvidu-insecure-react-library",
-  "version": "1.0.3",
+  "name": "create-react-library",
+  "version": "1.1.0",
   "description": "React NPM library starter kit based on Facebook's create react app",
   "main": "build/index.js",
   "scripts": {
@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/srivasd/openvidu-insecure-react-library.git"
+    "url": "git+https://github.com/DimitriMikadze/create-react-library.git"
   },
-  "author": "Sergio Rivas Delgado <srivasdelgado@gmail.com>",
+  "author": "Dimitri Mikadze <dimitrimikadze@gmail.com>",
   "bugs": {
-    "url": "https://github.com/srivasd/openvidu-insecure-react-library"
+    "url": "https://github.com/DimitriMikadze/create-react-library/issues"
   },
-  "homepage": "https://github.com/srivasd/openvidu-insecure-react-library#readme",
+  "homepage": "https://github.com/DimitriMikadze/create-react-library#readme",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

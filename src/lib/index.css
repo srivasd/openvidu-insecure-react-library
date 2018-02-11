@@ -3,42 +3,6 @@ html {
 	min-height: 100%;
 }
 
-nav {
-	height: 50px;
-	width: 100%;
-	z-index: 1;
-	background-color: #4d4d4d !important;
-	border-color: #4d4d4d !important;
-	border-top-right-radius: 0 !important;
-	border-top-left-radius: 0 !important;
-}
-
-.navbar-header {
-	width: 100%;
-}
-
-.nav-icon {
-	padding: 5px 15px 5px 15px;
-	float: right;
-}
-
-nav a {
-	color: #ccc !important;
-}
-
-nav i.fa {
-	font-size: 40px;
-	color: #ccc;
-}
-
-nav a:hover {
-	color: #a9a9a9 !important;
-}
-
-nav i.fa:hover {
-	color: #a9a9a9;
-}
-
 #main-container {
 	padding-bottom: 80px;
 }
@@ -52,17 +16,6 @@ nav i.fa:hover {
 
 .horizontal-center {
 	margin: 0 auto;
-}
-
-.form-control {
-	color: #0088aa;
-	font-weight: bold;
-}
-
-.form-control:focus {
-	border-color: #0088aa;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 136, 170, 0.6);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 136, 170, 0.6);
 }
 
 input.btn {
@@ -83,68 +36,14 @@ input.btn {
 	border-color: #1abd61;
 }
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #4d4d4d;
-}
-
-.footer .text-muted {
-	margin: 20px 0;
-	float: left;
-	color: #ccc;
-}
-
-.openvidu-logo {
-	height: 35px;
-	float: right;
-	margin: 12px 0;
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition: all 0.1s ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-
-.openvidu-logo:hover {
-	-webkit-filter: grayscale(0.5);
-	filter: grayscale(0.5);
-}
-
-.demo-logo {
-	margin: 0;
-	height: 22px;
-	float: left;
-	padding-right: 8px;
-}
-
-a:hover .demo-logo {
-	-webkit-filter: brightness(0.7);
-	filter: brightness(0.7);
-}
-
 #join-dialog h1 {
 	color: #4d4d4d;
 	font-weight: bold;
 	text-align: center;
 }
 
-#img-div {
-	text-align: center;
-	position: absolute;
-	top: 19%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-#img-div img {
-    height: 15%;
-    width: 30.5%;
-}
-
-#join-dialog label {
-	color: #0088aa;
+input#join-button {
+	margin-left: 100px;
 }
 
 #join-dialog input.btn {
@@ -170,32 +69,9 @@ a:hover .demo-logo {
 	cursor: pointer;
 }
 
-#video-container p {
-	display: inline-block;
-	background: #f8f8f8;
-	padding-right: 5px;
-	padding-left: 5px;
-	color: #777777;
-	font-weight: bold;
-	border-bottom-right-radius: 4px;
-}
-
 video {
 	width: 100%;
 	height: auto;
-}
-
-#main-video p {
-	position: absolute;
-	display: inline-block;
-	background: #f8f8f8;
-	padding-right: 5px;
-	padding-left: 5px;
-	left: 0;
-	font-size: 22px;
-	color: #777777;
-	font-weight: bold;
-	border-bottom-right-radius: 4px;
 }
 
 #main-video video {
@@ -219,13 +95,34 @@ video {
 	height: 180px;
 }
 
+@media screen and (min-width: 992px) {
+	div#main-video {
+		width: 45%;
+		display: inline-block;
+		padding-left: 10px;
+	}
+	
+	div#video-container {
+		width: 45%;
+		display: inline-block;
+		float: right;
+	}
+	
+	div#video-container .stream-container{
+		width: 40%;
+		display: inline-block;
+		margin-right: 10px;
+	}
+}
+
 
 /* xs ans md screen resolutions*/
 
 @media screen and (max-width: 991px) {
-	.vertical-center {
-		width: 85%;
-		padding-top: 10px;
-		top: 57%;
+	
+	div#video-container .stream-container{
+		width: 47.42%;
+		display: inline-block;
+		margin-right: 10px;
 	}
 }

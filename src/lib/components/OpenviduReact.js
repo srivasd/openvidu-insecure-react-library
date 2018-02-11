@@ -162,7 +162,6 @@ class OpenviduReact extends Component {
       return (
         <div id="main-container" className="container">
         { this.state.session === undefined ? <div id="join">
-          <div id="img-div"><img src="resources/images/openvidu_grey_bg_transp_cropped.png" alt="OpenVidu logo"/></div>
           <div id="join-dialog" className="jumbotron vertical-center">
           <h1> Join a video session </h1>
           <form className="form-group" onSubmit={this.handleSubmit}>
@@ -175,7 +174,7 @@ class OpenviduReact extends Component {
               <input className="form-control" type="text" id="sessionId" ref={(input) => { this.sessionId = input; }} value={valueSessionId} onChange={this.handleChangeSessionId.bind(this)}required/>
             </p>
             <p className="text-center">
-              <input className="btn btn-lg btn-success" name="commit" type="submit" value="JOIN"/>
+              <input id="join-button" name="commit" type="submit" value="JOIN"/>
             </p>
           </form>
           </div>
@@ -184,16 +183,16 @@ class OpenviduReact extends Component {
         { this.state.session !== undefined ? <div id="session">
           <div id="session-header">
             <h1 id="session-title" value={valueSessionId}>{valueSessionId}</h1>
-            <input id="buttonLeaveSession" className="btn btn-large btn-danger" type="button" onClick={this.handleClick} value="LeaveSession"/>
+            <input id="buttonLeaveSession" type="button" onClick={this.handleClick} value="LeaveSession"/>
           </div>
-          { this.state.mainVideoStream !== undefined ? <div id="main-video" className="col-md-6">
+          { this.state.mainVideoStream !== undefined ? <div id="main-video" >
             <StreamComponent stream={this.state.mainVideoStream} isMuted={true}></StreamComponent>
           </div> : null }
-          <div id="video-container" className="col-md-6">
-          { this.state.localStream !== undefined ? <div className="stream-container col-md-6 col-xs-6">
+          <div id="video-container">
+          { this.state.localStream !== undefined ? <div className="stream-container">
               <StreamComponent stream={this.state.localStream} isMuted={true} mainVideoStream={this.handleMainVideoStream}></StreamComponent>
             </div> : null }
-          { this.state.remoteStreams.map((s, i) => <div key={i} className="stream-container col-md-6 col-xs-6">
+          { this.state.remoteStreams.map((s, i) => <div key={i} className="stream-container">
               <StreamComponent stream={s} isMuted={false} mainVideoStream={this.handleMainVideoStream}></StreamComponent>
             </div>) }
           </div>
