@@ -7,10 +7,11 @@ class OpenviduReact extends Component {
   
   constructor(props){
     super(props);
-    //const { wsUrl, sessionId, participantId } = this.props;
+    //const { wsUrl, sessionId, participantId, token } = this.props;
     this.state = {valueSessionId: 'Session ' + this.props.sessionId,
                   valueUserName: 'Participant ' + this.props.participantId,
                   stateWsUrl: this.props.wsUrl,
+                  stateToken: this.props.token,
                   session: undefined,
                   mainVideoStream: undefined,
                   localStream: undefined,
@@ -78,8 +79,10 @@ class OpenviduReact extends Component {
         });
         
         var that = this;
+
+        var token = this.getCurrentToken();
         
-        mySession.connect(null, '{"clientData": "' + this.state.valueUserName + '"}', (error) => {
+        mySession.connect(token, '{"clientData": "' + this.state.valueUserName + '"}', (error) => {
             
           if (!error) {
             let publisher = that.OV.initPublisher('', {
@@ -156,6 +159,12 @@ class OpenviduReact extends Component {
 
     handleMainVideoStream(stream) {
       this.getMainVideoStream(stream);
+    }
+
+    getCurrentToken() {
+      return (this.state.stateToken)
+        ? this.state.stateToken
+        : 'dummytoken' + this.participantId;
     }
 
   render() {
