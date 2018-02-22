@@ -3,7 +3,7 @@ import OpenviduReact from '../lib';
 
 const App = () => (
   <div>
-    <OpenviduReact />
+    <OpenviduReact wsUrl={"localhost"} sessionId={"A"} participantId={1}/>
   </div>
 );
 

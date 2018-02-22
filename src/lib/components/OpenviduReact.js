@@ -7,8 +7,10 @@ class OpenviduReact extends Component {
   
   constructor(props){
     super(props);
-    this.state = {valueSessionId: 'SessionA',
-                  valueUserName: 'Participant' + Math.floor(Math.random() * 100),
+    //const { wsUrl, sessionId, participantId } = this.props;
+    this.state = {valueSessionId: 'Session ' + this.props.sessionId,
+                  valueUserName: 'Participant ' + this.props.participantId,
+                  stateWsUrl: this.props.wsUrl,
                   session: undefined,
                   mainVideoStream: undefined,
                   localStream: undefined,
@@ -46,7 +48,7 @@ class OpenviduReact extends Component {
       this.OV = new OpenVidu();
 
       this.setState({
-        session: this.OV.initSession("wss://" + window.location.hostname + ":8443/" + this.sessionId.value + '?secret=MY_SECRET'),
+        session: this.OV.initSession("wss://" + this.state.stateWsUrl + ":8443/" + this.state.valueSessionId + '?secret=MY_SECRET'),
       }, () => {
 
         var mySession = this.state.session;
@@ -116,8 +118,8 @@ class OpenviduReact extends Component {
       this.setState({
         session: undefined,
         remoteStreams: [],
-        valueSessionId: 'SessionA',
-        valueUserName: 'Participant' + Math.floor(Math.random() * 100),
+        valueSessionId: 'Session ' + this.props.sessionId,
+        valueUserName: 'Participant ' + this.props.participantId,
         localStream: undefined,
       });
 
