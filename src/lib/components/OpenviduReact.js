@@ -7,7 +7,6 @@ class OpenviduReact extends Component {
   
   constructor(props){
     super(props);
-    //const { wsUrl, sessionId, participantId, token } = this.props;
     this.state = {valueSessionId: 'Session ' + this.props.sessionId,
                   valueUserName: 'Participant ' + this.props.participantId,
                   stateWsUrl: this.props.wsUrl,

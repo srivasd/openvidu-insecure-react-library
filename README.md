@@ -11,16 +11,14 @@ _openvidu-server_ and _Kurento Media Server_ must be up and running in your deve
 ```bash
 docker run -p 8443:8443 --rm -e KMS_STUN_IP=stun.l.google.com -e KMS_STUN_PORT=19302 -e openvidu.secret=MY_SECRET openvidu/openvidu-server-kms
 ```
-
-> Note Parent containers should have `width` and `height` 100%, to `react-under-construction` was able to stretch full screen
-
+In App.js:
 ````
 import React from 'react';
 import OpenviduReact from 'openvidu-insecure-react-library';
 import 'openvidu-insecure-react-library/build/css/index.css';
 
 const App = () => (
-  <OpenviduReact/>
+  <OpenviduReact wsUrl={"localhost"} sessionId={"A"} participantId={1} token={"ljadskblvlifuvbklieu14857362sff45"}/>
 );
 
 export default App;
