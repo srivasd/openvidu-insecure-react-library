@@ -11,6 +11,7 @@ class OpenviduReact extends Component {
                   valueUserName: 'Participant ' + this.props.participantId,
                   stateWsUrl: this.props.wsUrl,
                   stateToken: this.props.token,
+                  stateDistributon: this.props.distribution,
                   session: undefined,
                   mainVideoStream: undefined,
                   localStream: undefined,
@@ -169,8 +170,9 @@ class OpenviduReact extends Component {
   render() {
     var valueSessionId = this.state.valueSessionId;
     var valueUserName = this.state.valueUserName;
+    var valueDistribution = this.state.stateDistributon;
       return (
-        <div id="main-container" className="container">
+        <div id= "main-container" className="container">
         { this.state.session === undefined ? <div id="join">
           <div id="join-dialog" className="jumbotron vertical-center">
           <h1> Join a video session </h1>
@@ -195,14 +197,14 @@ class OpenviduReact extends Component {
             <h1 id="session-title" value={valueSessionId}>{valueSessionId}</h1>
             <input id="buttonLeaveSession" type="button" onClick={this.handleClick} value="LeaveSession"/>
           </div>
-          { this.state.mainVideoStream !== undefined ? <div id="main-video" >
+          { this.state.mainVideoStream !== undefined ? <div id={valueDistribution + "main-video"} >
             <StreamComponent stream={this.state.mainVideoStream} isMuted={true}></StreamComponent>
           </div> : null }
-          <div id="video-container">
-          { this.state.localStream !== undefined ? <div className="stream-container">
+          <div id= {valueDistribution + "video-container"} >
+          { this.state.localStream !== undefined ? <div className= {valueDistribution + "stream-container"} >
               <StreamComponent stream={this.state.localStream} isMuted={true} mainVideoStream={this.handleMainVideoStream}></StreamComponent>
             </div> : null }
-          { this.state.remoteStreams.map((s, i) => <div key={i} className="stream-container">
+          { this.state.remoteStreams.map((s, i) => <div key={i} className= {valueDistribution + "stream-container"} >
               <StreamComponent stream={s} isMuted={false} mainVideoStream={this.handleMainVideoStream}></StreamComponent>
             </div>) }
           </div>

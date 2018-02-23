@@ -63,7 +63,7 @@ input#join-button {
 	margin-top: 20px;
 }
 
-#video-container video {
+#defaultvideo-container video {
 	position: relative;
 	float: left;
 	cursor: pointer;
@@ -74,7 +74,7 @@ video {
 	height: auto;
 }
 
-#main-video video {
+#defaultmain-video video {
 	cursor: initial;
 }
 
@@ -86,7 +86,7 @@ video {
 	vertical-align: baseline;
 }
 
-#session #video-container img {
+#session #defaultvideo-container img {
 	position: relative;
 	float: left;
 	width: 50%;
@@ -96,19 +96,19 @@ video {
 }
 
 @media screen and (min-width: 992px) {
-	div#main-video {
+	div#defaultmain-video {
 		width: 45%;
 		display: inline-block;
 		padding-left: 10px;
 	}
 	
-	div#video-container {
+	div#defaultvideo-container {
 		width: 45%;
 		display: inline-block;
 		float: right;
 	}
 	
-	div#video-container .stream-container{
+	div#defaultvideo-container .defaultstream-container{
 		width: 40%;
 		display: inline-block;
 		margin-right: 10px;
@@ -120,7 +120,7 @@ video {
 
 @media screen and (max-width: 991px) {
 	
-	div#video-container .stream-container{
+	div#defaultvideo-container .defaultstream-container{
 		width: 47.42%;
 		display: inline-block;
 		margin-right: 10px;
