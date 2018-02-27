@@ -27,7 +27,7 @@ To use AngularOpenVidu, [WebRTC](https://en.wikipedia.org/wiki/WebRTC) support i
 
 In this demo you will see a use case of `openvidu-insecure-react-library`, where you can test ALL the features included in this component.
 
-Link to the repository: [https://github.com/srivasd/demo-openvidu-react][demo-openvidu-react]
+Link to the repository: https://github.com/srivasd/demo-openvidu-react
 
 ### Features
 
@@ -68,9 +68,7 @@ export default App;
 
 3. Deploy OpenVidu Server
 
-You will need an [OpenVidu Server][openvidu-server].
-
-Follow the instructions in [this page](https://github.com/OpenVidu/openvidu-sample-basic-plainjs#start-openvidu-development-server) to deploy it with docker.
+Follow the instructions in [this page](http://openvidu.io/docs/reference-docs/openvidu-artifacts/) to deploy it with docker.
 
 
 
