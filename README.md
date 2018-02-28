@@ -13,7 +13,6 @@ To use AngularOpenVidu, [WebRTC](https://en.wikipedia.org/wiki/WebRTC) support i
 - [App Demo](#app-demo)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 
 ### App Demo
 
