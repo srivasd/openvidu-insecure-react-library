@@ -176,6 +176,7 @@ class OpenviduReact extends Component {
         { this.state.session === undefined ? <div id="join">
           <div id="join-dialog" className="jumbotron vertical-center">
           <h1> Join a video session </h1>
+          <i class="material-icons">face</i>
           <form className="form-group" onSubmit={this.handleSubmit}>
             <p>
               <label>Participant: </label>
